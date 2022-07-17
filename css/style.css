@@ -31,6 +31,21 @@
   border-color: #fff;
 }
 
+.img-service {
+  width: 100%;
+}
+
+#service {
+  padding-top: 5rem;
+  color: #fff;
+  background-color: #212529;
+  min-height: 300px;
+}
+
+#contact {
+  padding-top: 2rem;
+}
+
 footer {
   min-height: 100px;
 }
