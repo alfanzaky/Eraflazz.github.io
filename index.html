@@ -24,7 +24,7 @@
     <!--navbar-brand-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#home">
+        <a class="navbar-brand">
           <div class="align-items-center fw-bolder fst-italic">ERA<span class="text-danger align-items-center fw-bolder fst-italic">FLAZZ</span></div>
         </a>
         <button
@@ -175,20 +175,28 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <form>
+            <div class="alert alert-warning alert-dismissible fade show d-none form-alert" role="alert">
+              <strong>Thanks!</strong> Your message has been sent.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form name="eraflazz-contact-form">
               <div class="mb-3">
                 <label for="name" class="form-label">Full name</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <input type="text" class="form-control" id="name" name="name" aria-describedby="name" />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" />
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" />
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Messages</label>
-                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                <textarea class="form-control" id="pesan" name="pesan" rows="3"></textarea>
               </div>
-              <button type="submit" class="btn btn-danger mb-5">Send</button>
+              <button type="submit" class="btn btn-danger btn-send">Send</button>
+              <button class="btn btn-danger btn-loading d-none" type="button">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
@@ -204,5 +212,33 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwtu_lkWjSZEgBkEyrX1pnl5kUBew_RPATXB0yxaZF2jW1HjUDeZ3AmgB27zZ9bOcdJ/exec";
+      const form = document.forms["eraflazz-contact-form"];
+      const btnSend = document.querySelector(".btn-send");
+      const btnLoading = document.querySelector(".btn-loading");
+      const formAlert = document.querySelector(".form-alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // ketika tombol di submit
+        // tampilkan tombol loading , hilangkan tombol kirim
+        btnLoading.classList.toggle("d-none");
+        btnSend.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // tampilkan tombol send , hilangkan tombol loading
+            btnLoading.classList.toggle("d-none");
+            btnSend.classList.toggle("d-none");
+            // tampilkan alert
+            formAlert.classList.toggle("d-none");
+            // reset form
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
