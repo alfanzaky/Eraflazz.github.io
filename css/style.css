@@ -1,0 +1,40 @@
+.jumbotron {
+  padding-top: 5rem;
+  background-color: #fff;
+}
+
+.jumbotron img {
+  margin-top: 50px;
+}
+
+#about {
+  padding-top: 5rem;
+  background-color: #212529;
+  color: #fff;
+}
+#product {
+  padding-top: 5rem;
+  background-color: #fff;
+}
+#contact {
+  padding-top: 5rem;
+  background-color: #212529;
+  color: #fff;
+}
+
+#product-image {
+  width: 150px;
+  border-color: #fff;
+}
+
+#card-product {
+  border-color: #fff;
+}
+
+footer {
+  min-height: 100px;
+}
+
+footer p {
+  padding-top: 50px;
+}
