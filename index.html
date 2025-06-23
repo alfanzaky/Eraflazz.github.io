@@ -4,47 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ngoding Beast | Eraflazz</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0f0f0f;
-      color: #ffffff;
+      background-color: #121212;
+      color: #fff;
     }
-    header {
+    .hero {
       background-color: #1f1f1f;
-      padding: 2rem;
+      padding: 4rem 2rem;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
     }
-    header p {
+    .hero p {
       font-size: 1.2rem;
-      color: #ccc;
+      color: #bbb;
     }
-    main {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
+    .card {
+      background-color: #1c1c1c;
+      border: none;
+      color: #fff;
     }
-    .project {
-      background-color: #222;
-      border-radius: 10px;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    }
-    .project h3 {
-      margin-top: 0;
+    .card-title {
+      color: #4dc9ff;
     }
     footer {
-      text-align: center;
-      padding: 1rem;
       background-color: #1f1f1f;
       color: #aaa;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
     }
     a {
       color: #4dc9ff;
@@ -56,34 +48,51 @@
   </style>
 </head>
 <body>
-  <header>
+  <div class="hero">
     <h1>Ngoding Beast</h1>
     <p>Website portofolio milik Alfan Rozak | Eraflazz</p>
-  </header>
-  <main>
-    <section class="intro">
-      <h2>Halo! 👋</h2>
-      <p>Saya Alfan, seorang pengembang yang sedang membangun masa depan satu baris kode dalam satu waktu. Ini adalah proyek saya di dunia web & coding.</p>
-    </section>
+  </div>
 
-    <section class="project">
-      <h3>📂 Project 1: Website Portofolio</h3>
-      <p>Situs ini adalah hasil belajar GitHub Pages dan HTML/CSS untuk membangun identitas digital saya.</p>
-    </section>
+  <div class="container my-5">
+    <div class="row mb-4">
+      <div class="col">
+        <h2>Halo! 👋</h2>
+        <p>Saya Alfan, seorang pengembang yang sedang membangun masa depan satu baris kode dalam satu waktu. Ini adalah proyek saya di dunia web & coding.</p>
+      </div>
+    </div>
 
-    <section class="project">
-      <h3>📱 Project 2: Android App (Coming Soon)</h3>
-      <p>Saya sedang mengembangkan aplikasi Android sederhana menggunakan Android Studio di PC "Ngoding Beast".</p>
-    </section>
-
-    <section class="project">
-      <h3>🧠 Project 3: Machine Learning Test</h3>
-      <p>Eksperimen sederhana dengan Python dan machine learning menggunakan dataset kecil, untuk latihan AI & data science.</p>
-    </section>
-  </main>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">📂 Project 1: Website Portofolio</h5>
+            <p class="card-text">Situs ini adalah hasil belajar GitHub Pages dan HTML/CSS untuk membangun identitas digital saya.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">📱 Project 2: Android App (Coming Soon)</h5>
+            <p class="card-text">Saya sedang mengembangkan aplikasi Android sederhana menggunakan Android Studio di PC "Ngoding Beast".</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">🧠 Project 3: Machine Learning Test</h5>
+            <p class="card-text">Eksperimen sederhana dengan Python dan machine learning menggunakan dataset kecil, untuk latihan AI & data science.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer>
     &copy; 2025 Eraflazz. Dibangun dengan semangat ngoding dan kopi.
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
