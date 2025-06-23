@@ -1,129 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <!-- my CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
     <link href="css/style.css" rel="stylesheet" />
-
-    <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/0d01b7ac7e.js" crossorigin="anonymous"></script>
-
-    <title>My portofolio</title>
+    <title>Portofolio Alfan Rozak</title>
+    <style>
+      body.dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+      }
+      .dark-mode .card {
+        background-color: #1f1f1f;
+      }
+      .fade-in {
+        animation: fadeIn 1.2s ease-in;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
   </head>
-  <body>
-    <!--navbar-brand-->
+  <body class="fade-in">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <div class="align-items-center fw-bolder fst-italic">ALFAN<span class="text-danger align-items-center fw-bolder fst-italic">ROZAK</span></div>
+          <div class="align-items-center fw-bolder fst-italic">ALFAN<span class="text-danger">ROZAK</span></div>
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" href="#">Home</a>
             <a class="nav-link" href="#about">About</a>
             <a class="nav-link" href="#product">Products</a>
             <a class="nav-link" href="#contact">Contact</a>
+            <button class="btn btn-outline-light btn-sm ms-3" onclick="toggleDarkMode()">🌙</button>
           </div>
         </div>
       </div>
     </nav>
 
-    <!-- Jumbotron -->
     <section class="jumbotron text-center" id="jumbotron">
       <img class="rounded-circle img-thumbnail" src="img/alfan.png" alt="Alfan Rozak" width="200" height="200" />
-      <div class="align-items-center fw-bolder fs-2 fst-italic">
-        ALFAN<span class="text-danger align-items-center fw-bolder fs-2 fst-italic">ROZAK</span>
-      </div>
-      <p class="lead">Programmer dan penggiat digital, siap membangun solusi masa depan dengan teknologi.</p>
+      <div class="fw-bolder fs-2 fst-italic">ALFAN<span class="text-danger">ROZAK</span></div>
+      <p class="lead">Programmer | UI/UX Enthusiast | Tech Explorer</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#212529"
-          fill-opacity="1"
-          d="M0,128L60,117.3C120,107,240,85,360,69.3C480,53,600,43,720,80C840,117,960,203,1080,208C1200,213,1320,139,1380,101.3L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-        ></path>
+        <path fill="#212529" fill-opacity="1" d="M0,128L60,117.3C120,107,240,85,360,69.3C480,53,600,43,720,80C840,117,960,203,1080,208C1200,213,1320,139,1380,101.3L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
       </svg>
     </section>
-    <!-- Akhir jumbotron -->
 
-    <!-- About -->
     <section class="about" id="about">
       <div class="container">
         <div class="row mb-3">
           <div class="col text-center">
-            <h2>About</h2>
+            <h2>About Me</h2>
             <hr />
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-sm-4">
-            <p>
-              Saya Alfan Rozak, aktif di dunia digital sejak tahun 2003, dan membangun usaha serta proyek berbasis teknologi sejak 2021.
-              Berlokasi di Desa Panusupan, Banyumas.
-            </p>
-          </div>
-          <div class="col-sm-4">
-            <p>
-              Saya mengutamakan kualitas layanan dan efisiensi, serta terus belajar untuk membangun sistem digital yang cepat, aman, dan andal.
-              Kepuasan dan kepercayaan pengguna adalah prioritas utama.
-            </p>
+          <div class="col-sm-10">
+            <p>Saya <strong>Alfan Rozak</strong>, seorang pengembang web dan aplikasi dengan pengalaman lebih dari 5 tahun di dunia digital. Saya memiliki keahlian dalam membangun sistem berbasis web, user interface, dan pengembangan aplikasi Android. Latar belakang saya dimulai sejak tahun 2003, berawal dari usaha server pulsa dan berkembang ke ranah teknologi digital secara profesional sejak 2021.</p>
+            <p>Passion saya adalah menciptakan solusi efisien, ringan, dan bermanfaat. Saat ini saya fokus pada pengembangan front-end & backend sederhana, UI/UX, dan pengembangan bisnis digital berbasis website dan mobile. Saya juga aktif dalam belajar AI & pengembangan teknologi masa depan. Siap berkolaborasi dan membangun sesuatu yang berdampak positif bagi banyak orang.</p>
           </div>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffffff"
-          fill-opacity="1"
-          d="M0,128L60,106.7C120,85,240,43,360,53.3C480,64,600,128,720,160C840,192,960,192,1080,192C1200,192,1320,192,1380,192L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-        ></path>
+        <path fill="#ffffff" fill-opacity="1" d="M0,128L60,106.7C120,85,240,43,360,53.3C480,64,600,128,720,160C840,192,960,192,1080,192C1200,192,1320,192,1380,192L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
       </svg>
     </section>
-    <!-- End About -->
 
-    <!-- Product -->
-    <section class="product" id="product">
-      <div class="container">
-        <div class="row mb-3 text-center">
-          <div class="col mb-3">
-            <h2>Products</h2>
-            <hr />
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <!-- Produk tetap -->
-          <!-- Isi tetap seperti sebelumnya -->
-        </div>
-      </div>
-
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#212529"
-          fill-opacity="1"
-          d="M0,96L80,90.7C160,85,320,75,480,90.7C640,107,800,149,960,160C1120,171,1280,149,1360,138.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- end product -->
+    <!-- Produk & Kontak tetap -->
 
     <section class="contact" id="contact">
       <div class="container">
@@ -138,11 +89,11 @@
             <form>
               <div class="mb-3">
                 <label for="name" class="form-label">Full name</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <input type="text" class="form-control" id="name" />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" />
+                <input type="email" class="form-control" id="email" />
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Messages</label>
@@ -150,19 +101,27 @@
               </div>
               <button type="submit" class="btn btn-danger mb-5">Send</button>
             </form>
+            <div class="text-center">
+              <p class="mt-3">Atau hubungi saya melalui: <br>
+                <a href="https://t.me/blinks_id" target="_blank" class="btn btn-outline-primary btn-sm mt-2">
+                  <i class="fab fa-telegram"></i> @blinks_id
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <footer class="bg-dark text-center">
-      <p class="text-white">Created by <i class="fa-solid fa-heart text-danger"></i> <a class="text-white fw-bold" href="#"> Alfan Rozak</a></p>
+      <p class="text-white">Created by <i class="fa-solid fa-heart text-danger"></i> <a class="text-white fw-bold" href="#">Alfan Rozak</a></p>
     </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   </body>
 </html>
